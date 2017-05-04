@@ -21,16 +21,40 @@
 <div class="container py-4">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header>
+			
 			<?php the_title( '<h1 class="display-4">', '</h1>' ); ?>
-			<p>TESTS</p>
-		</header>
+		
+			<?php 
+				echo '<p style="text-align:center;">I am a Los Angeles based graphic designer. <br>
 
+				I have experience in a large variety of graphic design, including 
+				motion graphics, web,design and for-print designs.
+				<br>
+
+				Check out my work!
+				And if you like feel, free to contact me.
+				</p>';
+			?>
+		</div>
+		
+		</header>
 		<!-- new div for content -->
+		<div class="category-item">
+				<?php 
+					the_content();
+				?>
+
+				<?php
+
+				?>
+		</div>
+
+		
 
 		<div class="entry-content">
 			<?php
 				 // echo content div
-				the_content();
+				// -----the_content();
 					// echo closing div
 
 					// echho out fields here
