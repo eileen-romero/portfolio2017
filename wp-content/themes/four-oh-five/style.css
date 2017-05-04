@@ -4,10 +4,6 @@
  * Copyright 2011-2017 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-a {
-  color: #000;
-}
-
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -9715,4 +9711,12 @@ main,
       align-items: center;
   justified-content: center;
   text-align: center;
+}
+
+a {
+  color: #000;
+}
+
+.bg-faded {
+  background-color: #ffd500;
 }

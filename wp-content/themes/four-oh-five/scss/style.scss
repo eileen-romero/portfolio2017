@@ -6,9 +6,10 @@
  */
 
 // Core variables and mixins
+
 @import "variables";
 @import "mixins";
-@import "custom";
+
 
 // Reset and dependencies
 @import "normalize";
@@ -57,3 +58,4 @@
 // MY CUSTOM IMPORTS
 @import "wordpress";
 @import "category";
+@import "custom";

@@ -2,9 +2,15 @@
 //
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
-
-$brand-primary: #000;
+$brand-primary: $yellow;
 
 a{
-	color:$brand-primary;
+	color:#000;
 }
+
+
+.bg-faded{
+ 	  background-color: $brand-primary;
+ 	  
+ }
+
