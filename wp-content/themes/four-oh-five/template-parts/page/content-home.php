@@ -23,29 +23,51 @@
 		<header>
 			
 			<?php the_title( '<h1 class="display-4">', '</h1>' ); ?>
-		
-			<?php 
-				echo '<p style="text-align:center;">I am a Los Angeles based graphic designer. <br>
-
-				I have experience in a large variety of graphic design, including 
-				motion graphics, web,design and for-print designs.
-				<br>
-
-				Check out my work!
-				And if you like feel, free to contact me.
-				</p>';
-			?>
+		<!-- BIO SECTION -->
+			
 		</div>
 		
 		</header>
 		<!-- new div for content -->
-		<div class="category-item">
+		<div class="category_bio">
 				<?php 
 					the_content();
 				?>
+		</div>
 
-				<?php
+		<div class="category_item">
+				<?php 
+				// check if the repeater field has rows of data
+					if( have_rows('portfolio_category') ):
 
+					 	// loop through the rows of data
+					    while ( have_rows('portfolio_category') ) : the_row();
+							
+							
+					        // display a sub field value
+
+					        $image = get_sub_field('category_image');
+					        $title = get_sub_field('category_title');
+							echo $title;
+							$link = get_sub_field('category_link');
+					        // <img src="images/player.png" alt="the player" id="player" class="player">
+// 					        <a href="https://www.w3schools.com">
+// <img src="smiley.gif" alt="Go to W3Schools!" width="42" height="42" border="0">
+// </a>
+      						echo '<a href="' .$link. '"><img src="' .$image. '"></a>'; 
+      						echo '<br>';
+							
+
+
+
+
+					    endwhile;
+
+					else :
+
+					    // no rows found
+
+					endif;
 				?>
 		</div>
 
