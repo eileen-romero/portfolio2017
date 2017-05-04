@@ -11,8 +11,9 @@
  */
 
 ?>
-
+<!--  If post has image attached  and (is a single post or (is a single page and is not the frontpage))-->
 <?php if ( has_post_thumbnail() && ( is_single() || ( is_page() && ! fourohfive_is_frontpage() ) ) ) : ?>
+	<!-- background image is the thumbnail at full size. covers background. centered. no repeat. -->
 	<div style="background: url(<?php the_post_thumbnail_url( 'full' ); ?>) center center no-repeat; background-size: cover; -webkit-transform: translate3d(0,0,0); translate3d(0,0,0); background-attachment: fixed; height: 50vh;">
 	</div>
 <?php endif; ?>
@@ -23,10 +24,16 @@
 			<?php the_title( '<h1 class="display-4">', '</h1>' ); ?>
 			<p>TESTS</p>
 		</header>
+
+		<!-- new div for content -->
+
 		<div class="entry-content">
 			<?php
+				 // echo content div
 				the_content();
+					// echo closing div
 
+					// echho out fields here
 				fourohfive_edit_link( get_the_ID() );
 
 				if ( comments_open() || get_comments_number() ) :
