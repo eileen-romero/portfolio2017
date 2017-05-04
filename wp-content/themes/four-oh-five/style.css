@@ -9699,3 +9699,11 @@ main,
   background-color: #000;
   border-color: #000;
 }
+
+.category_item {
+  height: 100vh;
+  display: flexbox;
+  -ms-flex-align: center;
+      align-items: center;
+  justified-content: center;
+}
