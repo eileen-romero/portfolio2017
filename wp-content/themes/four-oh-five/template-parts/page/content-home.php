@@ -18,18 +18,29 @@
 	</div>
 <?php endif; ?>
 
+
+<!-- WHAT IS THIS FOR???????? -->
 <div class="container py-4">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<header>
-			
-			<?php the_title( '<h1 class="display-4">', '</h1>' ); ?>
-		<!-- BIO SECTION -->
-			
-		</div>
+	<header>
 		
-		</header>
+		
+	
+	</header>
+</div>
+
+
+<!-- BIO SECTION -->
 		<!-- new div for content -->
-		<div class="category_bio">
+
+
+<!-- ????????HOW DO I MAKE THIS BACKGROUND IMAGE WORk? -->
+	<?php
+		$bg_bio = get_field('background_image');
+	?>
+		<div class="category_bio" style = "background-image: $bg_bio;">
+
+		
 				<?php 
 					the_content();
 				?>

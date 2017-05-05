@@ -13,8 +13,8 @@
 get_header(); ?>
 
 <div class="container py-4">
-  <h1 class="display-4 font-weight-bold"><?php _e( 'Page Not Found', 'four-oh-five' ); ?></h1>
-  <p class="lead pt-4"><?php _e( 'The page you&rsquo;re looking for could not be found. It may have moved or been deleted. Double check the link, perhaps there&rsquo;s a typo somewhere, or use the search form to see if you can find it there.', 'four-oh-five' ); ?></p>
+  <h1 class="display-4 font-weight-bold"><?php _e( 'Page Not Found', 'four-oh-five' ); ?>UH OH!</h1>
+  <p class="lead pt-4"><?php _e( 'The page you&rsquo;re looking for could not be found. It may have moved or been deleted. Double check the link, perhaps there&rsquo;s a typo somewhere? Better luck next time!', 'four-oh-five' ); ?></p>
   <?php get_search_form(); ?>
 </div>
 

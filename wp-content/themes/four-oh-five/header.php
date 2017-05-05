@@ -27,7 +27,7 @@
 		</style>
 		<?php wp_head(); ?>
 	</head>
-	<body <?php body_class('site sticky-footer'); ?>>
+	<body <?php body_class('site'); ?>>
 		<?php if ( has_nav_menu( 'top' ) ) : ?>
 			<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
 		<?php endif; ?>
