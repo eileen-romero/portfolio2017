@@ -9659,23 +9659,7 @@ img {
   max-width: 100% !important;
 }
 
-.sticky-footer {
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -ms-flex-direction: column;
-      flex-direction: column;
-}
-
 /* Any one of the three selectors below is required for this to work. */
-main,
-[role="main"],
-.main,
-.container {
-  -ms-flex: 1 !important;
-      flex: 1 !important;
-}
-
 .navigation.pagination, .navigation.pagination .navigation.nav-links {
   text-align: center;
 }

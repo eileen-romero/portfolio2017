@@ -142,19 +142,19 @@ img {
 //
 // Makes the footer stick to the bottom of the page
 
-.sticky-footer {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
+// .sticky-footer {
+//   display: flex;
+//   min-height: 100vh;
+//   flex-direction: column;
+// }
 
 /* Any one of the three selectors below is required for this to work. */
-main, 
-[role="main"],
-.main,
-.container {
-  flex: 1 !important;
-}
+// main, 
+// [role="main"],
+// .main,
+// .container {
+//   flex: 1 !important;
+// }
 
 // Pagination
 //

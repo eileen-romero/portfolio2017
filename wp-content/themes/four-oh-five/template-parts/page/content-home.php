@@ -19,34 +19,27 @@
 <?php endif; ?>
 
 
-<!-- WHAT IS THIS FOR???????? -->
-<div class="container py-4">
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header>
-		
-		
-	
-	</header>
-</div>
-
 
 <!-- BIO SECTION -->
-		<!-- new div for content -->
-
-
-<!-- ????????HOW DO I MAKE THIS BACKGROUND IMAGE WORk? -->
+		
 	<?php
 		$bg_bio = get_field('background_image');
-	?>
-		<div class="category_bio" style = "background-image: $bg_bio;">
+	
 
-		
+	// NEED TO GET IMAGE TO NOT REPEAT 
+		echo '<div class="category_bio" style = "background-image: url(' .$bg_bio. ') ; background-repeat:no-repeat; background:cover;" center center fixed no-repeat >';
+
+		?>
 				<?php 
 					the_content();
 				?>
-		</div>
+		
+		<?php  
+			echo '</div>';
 
-		<div class="category_item">
+		?>
+
+		<div class="">
 				<?php 
 				// check if the repeater field has rows of data
 					if( have_rows('portfolio_category') ):
@@ -54,20 +47,18 @@
 					 	// loop through the rows of data
 					    while ( have_rows('portfolio_category') ) : the_row();
 							
-							
+							echo '<div class="category_item">';
 					        // display a sub field value
 
 					        $image = get_sub_field('category_image');
 					        $title = get_sub_field('category_title');
 							echo $title;
 							$link = get_sub_field('category_link');
-					        // <img src="images/player.png" alt="the player" id="player" class="player">
-// 					        <a href="https://www.w3schools.com">
-// <img src="smiley.gif" alt="Go to W3Schools!" width="42" height="42" border="0">
-// </a>
+
       						echo '<a href="' .$link. '"><img src="' .$image. '"></a>'; 
       						echo '<br>';
 							
+							echo '</div>';
 
 
 
