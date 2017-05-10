@@ -26,8 +26,10 @@
 		$bg_bio = get_field('background_image');
 	
 
-	// NEED TO GET IMAGE TO NOT REPEAT 
-		echo '<div class="category_bio" style = "background-image: url(' .$bg_bio. ') ; background-repeat:no-repeat; background:cover;" center center fixed no-repeat >';
+	// ** NEED TO GET IMAGE TO NOT REPEAT 
+
+	// THIS IS MY BIO SECTION DIV
+		echo '<div class="category_bio text-white" style = "background-image: url(' .$bg_bio. ') ; background-repeat:no-repeat; background:cover;" center center fixed no-repeat  >';
 
 		?>
 				<?php 
@@ -36,9 +38,12 @@
 		
 		<?php  
 			echo '</div>';
-
 		?>
+	<!-- END OF BIO DIV -->
 
+
+
+	<!-- MY REPEATER FEILD that shows the image title and such	 -->
 		<div class="">
 				<?php 
 				// check if the repeater field has rows of data
@@ -47,15 +52,15 @@
 					 	// loop through the rows of data
 					    while ( have_rows('portfolio_category') ) : the_row();
 							
-							echo '<div class="category_item">';
+							echo '<div class="category_item text-center " style = "overflow: hidden">';
 					        // display a sub field value
 
 					        $image = get_sub_field('category_image');
 					        $title = get_sub_field('category_title');
-							echo $title;
+							echo '<h1 style="margin-top: 100px">' .$title. '</h1>';
 							$link = get_sub_field('category_link');
 
-      						echo '<a href="' .$link. '"><img src="' .$image. '"></a>'; 
+      						echo '<a href="' .$link. '"><img src="' .$image. '" class="flexbox" ></a>'; 
       						echo '<br>';
 							
 							echo '</div>';

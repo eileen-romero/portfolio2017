@@ -52,6 +52,7 @@
     <h2 class="card-subtitle h6 mb-4 text-muted"><?php the_author(); ?> on <?php the_time('F jS, Y') ?></h2>
 
     <?php
+    // What is this springf?????
       the_content( sprintf(
         __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'four-oh-five' ),
         get_the_title()
