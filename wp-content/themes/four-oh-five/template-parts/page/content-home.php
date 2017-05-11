@@ -32,8 +32,10 @@
 		echo '<div class="category_bio text-white" style = "background-image: url(' .$bg_bio. ') ; background-repeat:no-repeat; background:cover;" center center fixed no-repeat  >';
 
 		?>
-				<?php 
-					the_content();
+				<?php
+
+					$content = get_field('content');
+					echo '<h4 style="padding-top:20px; font-size: 20px; line-height: 25px;">' .$content. '</h4>';
 				?>
 		
 		<?php  
@@ -51,22 +53,29 @@
 
 					 	// loop through the rows of data
 					    while ( have_rows('portfolio_category') ) : the_row();
-							
-							echo '<div class="category_item text-center " style = "overflow: hidden">';
-					        // display a sub field value
 
-					        $image = get_sub_field('category_image');
-					        $title = get_sub_field('category_title');
-							echo '<h1 style="margin-top: 100px">' .$title. '</h1>';
-							$link = get_sub_field('category_link');
 
-      						echo '<a href="' .$link. '"><img src="' .$image. '" class="flexbox" ></a>'; 
-      						echo '<br>';
+							// Outer Div - Ech project will have their own
+							 $image = get_sub_field('category_image');
+							 echo "<div class='project text-center' style = 'background-image:url(".$image.");'>";
+									 // content within div
+									 $title = get_sub_field('category_title');
+									 echo '<h2 style="padding-top:45vh; font-size: 100px;">' .$title. '</h2>';
+					       
+
+					       
+					       
+						
+							// $link = get_sub_field('category_archive_link');
+
+							// if( $link ): 
+
+      						// echo '<a href="' .$link. '"><img src="' .$image. '" class="flexbox" ></a>'; 
+      						// echo '<br>';
 							
 							echo '</div>';
 
-
-
+							// endif;
 
 					    endwhile;
 
@@ -87,7 +96,7 @@
 					// echo closing div
 
 					// echho out fields here
-				fourohfive_edit_link( get_the_ID() );
+				// fourohfive_edit_link( get_the_ID() );
 
 				if ( comments_open() || get_comments_number() ) :
 					comments_template();
